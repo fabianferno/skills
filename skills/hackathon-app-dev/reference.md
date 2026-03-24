@@ -104,6 +104,13 @@ Configure via **Cursor Settings → MCP** or the project’s MCP config file (pa
 - After changing layout or shadcn component structure, **re-run the tour** once locally.
 - If using cross-route steps, confirm `nextRoute` / `prevRoute` (per [NextStepjs routing docs](https://nextstepjs.com/docs/nextjs/routing)) still match the App Router tree.
 
+### First visit + replay (localStorage + header)
+
+- **Storage**: Use one key, e.g. `"{appSlug}_product_tour_seen"` or `"..._complete"`, set to `"1"` (or a schema version string) when the user **finishes** or **skips** the tour—define which counts as “seen” for your hack.
+- **Auto-start**: In a client-only path (`useEffect` after mount), if the key is missing, call the library’s tour **start** once; if present, do not auto-start.
+- **Header**: Render a **`Book`** button from `lucide-react` in the shared nav/header; on click, start the tour again (same steps as first run). Optional: do not write to localStorage on manual replay if you still want “once per user” to mean “once auto-shown,” or clear the key only when debugging—pick one rule and keep it consistent.
+- **Next.js**: Guard all `localStorage` access behind `typeof window !== "undefined"` and/or effects so SSR/hydration do not throw or mismatch.
+
 ---
 
 ## Sponsor docs in Cursor

@@ -44,6 +44,16 @@ Apply when starting or evolving a hackathon project that needs **fast iteration*
 | Component extras | **React Bits** ([reactbits.dev](https://reactbits.dev)) — add via the **shadcn registry** flow documented for that library (CLI/registry URL), alongside core shadcn components. |
 | Onboarding UI | **nextstepjs** ([NextStepjs](https://nextstepjs.com/docs/nextjs)) — product tours for App Router; install per docs (commonly `nextstepjs` + `motion`). Add **after** core flows work; **revisit when UI changes** so steps and selectors stay valid. |
 
+### Product tour (nextstepjs) — UX rules
+
+When implementing the tour:
+
+1. **First visit only (default)** — Run the tour automatically **once per browser profile**: persist completion (or “seen”) in **`localStorage`** with a stable app-specific key (e.g. `myapp_onboarding_tour_complete`). On mount, read it in a **client** component / `useEffect` so you never touch `localStorage` during SSR.
+2. **Replay anytime** — Add a **header nav** control (icon button) that **starts the tour on demand** for users who want onboarding again. Use the **`Book`** icon from **lucide-react** for that button (label with `sr-only` or `aria-label` like “Replay product tour”).
+3. **Placement** — Keep the control in the **main app header/nav** so it stays discoverable on every screen the tour targets.
+
+Confirm start/restart APIs against the current [NextStepjs Next.js docs](https://nextstepjs.com/docs/nextjs) (e.g. imperative `start` / step reset) so the header button and first-visit logic stay in sync.
+
 ---
 
 ## Web3 auth
@@ -105,7 +115,7 @@ Hackathon app dev checklist
 - [ ] React Bits registered alongside shadcn components
 - [ ] MCPs: Shadcn, Supabase, Privy (if EVM)
 - [ ] Sponsor docs indexed in Cursor
-- [ ] nextstepjs tour added/updated near freeze; fix selectors after UI changes
+- [ ] nextstepjs: auto-tour once per user (`localStorage`); header **Book** (lucide) button to replay; update steps when UI changes
 - [ ] Landing: Lenis + SEO/PWA/icon set per hackathon-landing-pwa (if shipping a public page)
 - [ ] Pitch: in-app slide page per pitch-deck-frontend (after core demo + landing are done)
 ```
