@@ -81,6 +81,14 @@ Tune **threshold** / **rootMargin** so manual flick-scroll still picks a single 
 
 ---
 
+## Icons — no emojis
+
+- **Never** put Unicode emojis in pitch content or controls.
+- Use **`lucide-react`** (`pnpm add lucide-react` if missing): e.g. `Check` for wins, `X` for competitor gaps, `ArrowRight` / `ChevronDown` for navigation cues, `ExternalLink` for references, `Circle` (filled + `animate-pulse`) for live/demo indicators.
+- Keep icon weight and stroke consistent across the deck; size down on dense slides so icons support the type, not replace it.
+
+---
+
 ## Color tokens (recommended)
 
 Define once and reuse:
@@ -116,6 +124,7 @@ Define once and reuse:
 - [ ] No slide combines unrelated ideas.
 - [ ] Charts: labeled axes and sources; **no pie charts** (per skill).
 - [ ] Comparison slide: ≤3–4 competitors, your row visually primary.
+- [ ] **No emojis** — only Lucide (or equivalent SVG) icons where visuals are needed.
 
 ---
 

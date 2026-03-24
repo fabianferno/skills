@@ -3,12 +3,19 @@ name: pitch-deck-frontend
 description: >
   Use when building a web-based pitch deck, investor presentation, or slide-based page in a frontend app.
   Triggers on requests like "create a pitch page", "build a presentation", "make slides for investors",
-  "pitch deck in the app", or any full-screen scrollable slide layout.
+  "pitch deck in the app", or any full-screen scrollable slide layout. Do not use emojis; use lucide-react
+  icons for visual accents when needed.
 ---
 
 # Pitch Deck Frontend
 
 Build polished, full-screen slide presentations inside web apps. Covers layout architecture, typography scale, color discipline, content rules, and interactive navigation.
+
+## No emojis — use Lucide React
+
+**Do not use emojis** anywhere in the pitch UI or slide copy (headings, bullets, labels, navigation hints, “live” indicators, social proof, etc.). They read informal, render inconsistently across OS/fonts, and clash with a tight investor deck.
+
+When you need a visual beat (checkmarks, arrows, category marks, “pulse” indicators, external links), use **`lucide-react`** icons with the deck’s **accent** color and shared size classes (e.g. `h-4 w-4` or `h-5 w-5`). Prefer outline-style icons that match the monospace / technical tone unless the slide pattern explicitly calls for filled marks.
 
 ## Architecture
 
@@ -161,6 +168,7 @@ Map source document sections 1:1 to slides. Don't invent extra slides or merge s
 | Centering body text | Left-align body, only center title slide |
 | Charts without labels | Label directly on chart, cite sources |
 | Pie charts | Never. Use bar charts or big stat numbers |
+| Emojis in slides or chrome | **Forbidden** — replace with **lucide-react** icons + text |
 
 ---
 
