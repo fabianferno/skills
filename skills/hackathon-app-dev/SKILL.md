@@ -1,7 +1,6 @@
 ---
 name: hackathon-app-dev
-description: >-
-  Guides rapid full-stack and Web3 hackathon prototyping: Next.js, Tailwind, shadcn/ui, Supabase (database), Privy or chain-native auth, API routes, motion, onboarding tours, and MCP setup. Use when building or scoping a hackathon app, hack weekend MVP, sponsor integration, or fast-iteration web3 prototype.
+description: Guides rapid full-stack and Web3 hackathon prototyping: Next.js, Tailwind, shadcn/ui, Supabase (database), Privy or chain-native auth, API routes, motion, onboarding tours, and MCP setup. Use when building or scoping a hackathon app, hack weekend MVP, sponsor integration, or fast-iteration web3 prototype. For problem-first ideation and mapping tracks after the product story, use hackathon-problem-first first.
 ---
 
 # Hackathon app development
@@ -9,6 +8,8 @@ description: >-
 ## When to use
 
 Apply when starting or evolving a hackathon project that needs **fast iteration**, a **polished demo**, and optional **Web3** auth—especially full-stack Next.js stacks with sponsor integrations.
+
+**Ideation (before locking a concept)** — Do not start from prize sheets and invent a product backward; that usually reads forced to judges. Prefer real problems or trends, a relatable product with strong UX, **then** map tracks and bounties. See [hackathon-problem-first](../hackathon-problem-first/SKILL.md).
 
 ---
 
@@ -118,8 +119,9 @@ Hackathon app dev checklist
 
 ## Related skills in this repo
 
-- `hackathon-idea-generator` — ideation and tracks.
-- `hackathon-judge-simulator` — pitch and demo hardening.
-- `interface-design` — product UI patterns (non-marketing).
+- [hackathon-problem-first](../hackathon-problem-first/SKILL.md) — problem- and trend-first ideation; map prizes **after** the product story is coherent.
+- `hackathon-idea-generator` — many candidate ideas and track constraints (if installed).
+- `hackathon-judge-simulator` — pitch and demo hardening (if installed).
+- `interface-design` — product UI patterns, non-marketing (if installed).
 
-When the user’s machine has other skills installed (e.g. Polkadot, Yellow SDK), prefer those instructions for chain-specific work.
+When the user’s machine has other skills installed (e.g. Polkadot Hub, Yellow SDK), prefer those instructions for chain-specific work.

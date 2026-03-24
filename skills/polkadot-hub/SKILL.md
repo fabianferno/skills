@@ -508,3 +508,9 @@ For building custom blockchains (not just smart contracts).
 - **Writing Rust contracts**: → PVM (only option)
 - **Need exact EVM semantics guaranteed**: → REVM
 - **Mixing both**: Totally fine — cross-VM calls work. Use REVM for standard stuff, PVM for heavy compute.
+
+---
+
+## Additional resources
+
+- VM choice, metering, PVM limits, migration gotchas, tooling links: [reference.md](reference.md)

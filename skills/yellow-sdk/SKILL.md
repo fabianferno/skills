@@ -501,6 +501,10 @@ curl -X POST https://clearnet-sandbox.yellow.com/faucet/requestTokens \
 
 Optional: `yellow-ts` for a higher-level WebSocket client wrapper; official quickstart uses raw WebSocket + `@erc7824/nitrolite`.
 
+## Additional resources
+
+- Endpoints, env vars, wire methods, resize vs allocate, troubleshooting, faucet: [reference.md](reference.md)
+
 ## Resources
 
 - [Yellow Docs](https://docs.yellow.org/) — Learn, Build, Run a Clearnode

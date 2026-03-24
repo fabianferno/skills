@@ -158,3 +158,9 @@ Map source document sections 1:1 to slides. Don't invent extra slides or merge s
 | Centering body text | Left-align body, only center title slide |
 | Charts without labels | Label directly on chart, cite sources |
 | Pie charts | Never. Use bar charts or big stat numbers |
+
+---
+
+## Additional resources
+
+- Layout skeleton, observer/navigation patterns, a11y, token checklist: [reference.md](reference.md)
