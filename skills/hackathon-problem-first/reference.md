@@ -4,6 +4,25 @@ Workshop-style prompts and lightweight artifacts to use **during** ideation. Phi
 
 ---
 
+## Example projects (problem-first)
+
+These ETHGlobal showcase builds won **finalist** placement and **multiple prizes**. They are useful as **counterexamples to prize-first hacks**: you could name-check the same sponsors, but the **demo narrative** starts from a situation judges and users already understand.
+
+**Pattern to copy**: state the **anchor problem in plain language** → show **one core loop** → only then explain which integrations make that loop trustworthy, social, or automatable.
+
+| Project | Showcase | Problem anchor (no sponsor names) | How sponsor / chain tech **serves** the product (not the reverse) |
+|---------|----------|-----------------------------------|---------------------------------------------------------------------|
+| **Wrld Map** | https://ethglobal.com/showcase/wrld-map-v64h2 | Travel confirmations live in email; there is no single, **verifiable**, shareable map of where you have really been. | **Email proofs** turn receipts into facts; **World ID** ties maps to real humans; **on-chain storage** + explorer (e.g. Blockscout) make the history portable and inspectable—**the product is the atlas**, not “a zk demo.” |
+| **CalCast** | https://ethglobal.com/showcase/calcast-7g042 | On Farcaster you discover people, then **leave** to Calendly-style tools to book time—extra apps, weaker ownership of scheduling data. | **Frames** keep booking **inside** the feed; **indexing** (e.g. The Graph) and **chain** deployment support the same loop a user would describe as “book a call where I already am.” |
+| **CalendeFi** | https://ethglobal.com/showcase/calendefi-6d3ji | DeFi forces new UIs and habits; **millions of people already live in calendars** for “when things happen,” including money and coordination. | Calendar events become **intents**; **WalletConnect**, DEX, fiat rails, **ENS** are **execution and identity layers** for scheduling you already understand—**the product is calendar-native finance**, not “another wallet tab.” |
+| **WalletSheets** | https://ethglobal.com/showcase/walletsheets-g5p8i | Crypto power users still fight specialized dashboards; **spreadsheets** are a global default for tracking and “what-if” work. | Agents, **private compute / vaults**, and **WalletConnect** let a Sheet **act** as a wallet and DeFi surface—**the product is Sheets as command center**, not “Nillion for its own sake.” |
+| **OnlyCars** | https://ethglobal.com/showcase/onlycars-vo161 | EV drivers need to **find**, **pay for**, and **share** charging without brittle siloed apps; coordination and trust matter at the edge. | Identity, messaging, indexing, and contracts **support find → pay → share charger network**—**the product is charging that feels like one app**, not a stack parade. |
+| **Atestamint** | https://ethglobal.com/showcase/atestamint-xi8ch | NFT **rug pulls** destroyed trust; backers have little **on-chain** assurance that creators will ship milestones before funds fully move. | **Vaults**, **attestations**, **sybil-resistant humans**, **NFT issuance**, and **indexing** implement **milestone unlocks and reputation**—**the product is provable delivery**, not “use EAS + Zora.” |
+
+**Takeaway for your pitch**: if you remove sponsor logos and the story collapses, you are still prize-first. If the story stands and integrations are “how we made it real,” you are aligned with this method.
+
+---
+
 ## One-page order (print or duplicate in a doc)
 
 1. **Anchor** — Real pain or credible trend (no sponsor names).
@@ -71,6 +90,6 @@ Out of scope for weekend: [explicit cuts]
 
 ## Handoff
 
-- Implementation stack and checklist: **[hackathon-app-dev](../hackathon-app-dev/SKILL.md)** (+ [reference.md](../hackathon-app-dev/reference.md)).
+- Implementation stack and checklist: **[hackathon-app-dev](../hackathon-app-dev/SKILL.md)** (+ [reference.md](../hackathon-app-dev/reference.md)). The case studies above are **examples of that build quality** once the concept is fixed.
 - Many ideas / track constraints: **`hackathon-idea-generator`** (if installed).
 - Adversarial Q&A: **`hackathon-judge-simulator`** (if installed).

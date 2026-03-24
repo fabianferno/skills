@@ -123,7 +123,7 @@ Hackathon app dev checklist
 
 ## Related skills in this repo
 
-- [hackathon-problem-first](../hackathon-problem-first/SKILL.md) — problem- and trend-first ideation; map prizes **after** the product story is coherent.
+- [hackathon-problem-first](../hackathon-problem-first/SKILL.md) — problem- and trend-first ideation; map prizes **after** the product story is coherent. ETHGlobal finalist examples and analysis: [reference.md](../hackathon-problem-first/reference.md#example-projects-problem-first).
 - `hackathon-idea-generator` — many candidate ideas and track constraints (if installed).
 - `hackathon-judge-simulator` — pitch and demo hardening (if installed).
 - `interface-design` — product UI patterns, non-marketing (if installed).

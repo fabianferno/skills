@@ -2,8 +2,9 @@
 name: hackathon-problem-first
 description: >
   Guides hackathon ideation by starting from real problems and trends, then shipping a relatable product with
-  strong UX before mapping sponsor tracks and prizes. Use when brainstorming hackathon ideas, choosing a track,
-  aligning to prize categories, or when prize-first thinking feels forced or incoherent.
+  strong UX before mapping sponsor tracks and prizes. Includes ETHGlobal finalist case studies (Wrld Map, CalCast,
+  CalendeFi, WalletSheets, OnlyCars, Atestamint) as problem-first examples. Use when brainstorming hackathon ideas,
+  choosing a track, aligning to prize categories, or when prize-first thinking feels forced or incoherent.
 ---
 
 # Hackathon problem-first ideation
@@ -32,6 +33,23 @@ If a prize cannot align without rewriting the whole idea, **keep the product** a
 - Demos read as **products**, not “API homework.”
 - Q&A stays on **user value** instead of contrived sponsor narratives.
 - Prize alignment feels **earned**, which judges and sponsors tend to reward more than checkbox integrations.
+
+---
+
+## Reference builds (finalist / multi-prize)
+
+The following ETHGlobal showcases follow **problem → product → UX → sponsor fit**: the pitch centers a **recognizable user job**, and chain or sponsor tech **proves or ships** that job—not the other way around.
+
+| Project | Showcase |
+|---------|----------|
+| Wrld Map | https://ethglobal.com/showcase/wrld-map-v64h2 |
+| CalCast | https://ethglobal.com/showcase/calcast-7g042 |
+| CalendeFi | https://ethglobal.com/showcase/calendefi-6d3ji |
+| WalletSheets | https://ethglobal.com/showcase/walletsheets-g5p8i |
+| OnlyCars | https://ethglobal.com/showcase/onlycars-vo161 |
+| Atestamint | https://ethglobal.com/showcase/atestamint-xi8ch |
+
+For **one-line anchors**, how each stack **serves** the story (vs. starting from the API), and a repeatable pattern to copy: [reference.md](reference.md#example-projects-problem-first).
 
 ---
 
