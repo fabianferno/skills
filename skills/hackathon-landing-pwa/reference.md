@@ -126,6 +126,17 @@ Prefer one primary sans for UI and long text: **Inter**, **Roboto**, **Questrial
 
 Use for **hero and section titles** only; subset/limit weights for performance. **Download** display fonts from [DaFont](https://www.dafont.com) (or the vendor site); verify **license** for demo vs commercial use.
 
+### DaFont CLI download
+
+DaFont serves a zip per font via `dl.dafont.com`. The query param **`f`** is the font **slug** from the site URL (the path before `.font`), e.g. `herkey` from `https://www.dafont.com/herkey.font`, `coolvetica` from `coolvetica.font`, `safira-march` from `safira-march.font`.
+
+```bash
+curl -L "https://dl.dafont.com/dl/?f=herkey" -o herkey.zip
+unzip herkey.zip -d ./app/fonts/herkey
+```
+
+Swap `herkey` for your slug and adjust the unzip target to match the repo. Then pick the right `.ttf` / `.otf` from the archive, convert to **woff2** if required, and point `next/font/local` `src` at that file.
+
 | Font | Notes | Link |
 |------|--------|------|
 | Safira March | Elegant, stylized | https://www.dafont.com/safira-march.font |
@@ -144,7 +155,7 @@ Use for **hero and section titles** only; subset/limit weights for performance. 
 
 ### Example: Inter (base) + Coolvetica (headings)
 
-**1.** Add files: download Coolvetica, convert to **`.woff2`** if needed, e.g. `app/fonts/CoolveticaRg-Regular.woff2`.
+**1.** Add files: fetch Coolvetica via [DaFont CLI download](#dafont-cli-download) (e.g. `f=coolvetica`), unzip, convert to **`.woff2`** if needed, e.g. `app/fonts/CoolveticaRg-Regular.woff2`.
 
 **2.** Root layout (App Router):
 

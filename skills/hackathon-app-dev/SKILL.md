@@ -81,7 +81,7 @@ If MCPs are missing, prompt the user to add them in **Cursor Settings → MCP** 
 
 ## Design and skills
 
-- **Landing / marketing surface**: follow **[hackathon-landing-pwa](../hackathon-landing-pwa/SKILL.md)** for Lenis scroll, favicon/OG/Twitter assets, PWA, selection styling, and copy/font patterns; pair with the **Claude `frontend-design`** skill (or equivalent) for distinctive visual design. Keep app shells and dashboards consistent with shadcn + product UI patterns.
+- **Landing / marketing surface**: follow **[hackathon-landing-pwa](../hackathon-landing-pwa/SKILL.md)** for Lenis scroll, favicon/OG/Twitter assets, PWA, selection styling, and copy/font patterns (including **DaFont `curl` zip** download); pair with the **Claude `frontend-design`** skill (or equivalent) for distinctive visual design. Keep app shells and dashboards consistent with shadcn + product UI patterns.
 - **Before large UI work**: check for **interface-design**, **frontend-design**, or domain skills (e.g. **polkadot-hub**, **yellow-sdk**) and apply when they match the stack.
 - **Sponsor / integration docs**: add official documentation to **Cursor** (Docs / @-mentions / indexed context per Cursor version) so implementation tracks sponsor APIs and constraints.
 - **Pitch slide page (end of build)**: when implementation is **feature-complete for the hack**, follow **[pitch-deck-frontend](../pitch-deck-frontend/SKILL.md)** to add the full-screen, snap-scroll pitch route in the same Next.js app (slides, nav, typography per that skill).
