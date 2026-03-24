@@ -1,6 +1,9 @@
 ---
 name: hackathon-problem-first
-description: Guides hackathon ideation by starting from real problems and trends, then shipping a relatable product with strong UX before mapping sponsor tracks and prizes. Use when brainstorming hackathon ideas, choosing a track, aligning to prize categories, or when prize-first thinking feels forced or incoherent.
+description: >
+  Guides hackathon ideation by starting from real problems and trends, then shipping a relatable product with
+  strong UX before mapping sponsor tracks and prizes. Use when brainstorming hackathon ideas, choosing a track,
+  aligning to prize categories, or when prize-first thinking feels forced or incoherent.
 ---
 
 # Hackathon problem-first ideation

@@ -1,6 +1,9 @@
 ---
 name: pitch-deck-frontend
-description: Use when building a web-based pitch deck, investor presentation, or slide-based page in a frontend app. Triggers on requests like "create a pitch page", "build a presentation", "make slides for investors", "pitch deck in the app", or any full-screen scrollable slide layout.
+description: >
+  Use when building a web-based pitch deck, investor presentation, or slide-based page in a frontend app.
+  Triggers on requests like "create a pitch page", "build a presentation", "make slides for investors",
+  "pitch deck in the app", or any full-screen scrollable slide layout.
 ---
 
 # Pitch Deck Frontend

@@ -1,6 +1,9 @@
 ---
 name: yellow-sdk
-description: Implement Yellow SDK (WebSocket gateway for Nitrolite/ERC-7824 state channels) for instant off-chain transactions, payment channels, and multi-party app sessions. Use when working with Yellow Network, Nitrolite protocol, state channels, payment channels, off-chain transactions, or ERC-7824.
+description: >
+  Implement Yellow SDK (WebSocket gateway for Nitrolite/ERC-7824 state channels) for instant off-chain
+  transactions, payment channels, and multi-party app sessions. Use when working with Yellow Network, Nitrolite
+  protocol, state channels, payment channels, off-chain transactions, or ERC-7824.
 ---
 
 # Yellow SDK

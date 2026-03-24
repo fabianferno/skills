@@ -1,6 +1,10 @@
 ---
 name: hackathon-app-dev
-description: Guides rapid full-stack and Web3 hackathon prototyping: Next.js, Tailwind, shadcn/ui, Supabase (database), Privy or chain-native auth, API routes, motion, onboarding tours, and MCP setup. Use when building or scoping a hackathon app, hack weekend MVP, sponsor integration, or fast-iteration web3 prototype. For problem-first ideation and mapping tracks after the product story, use hackathon-problem-first first.
+description: >
+  Guides rapid full-stack and Web3 hackathon prototyping: Next.js, Tailwind, shadcn/ui, Supabase (database),
+  Privy or chain-native auth, API routes, motion, onboarding tours, and MCP setup. Use when building or scoping
+  a hackathon app, hack weekend MVP, sponsor integration, or fast-iteration web3 prototype. For problem-first
+  ideation and mapping tracks after the product story, use hackathon-problem-first first.
 ---
 
 # Hackathon app development
