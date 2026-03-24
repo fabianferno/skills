@@ -4,7 +4,9 @@ description: >
   Guides rapid full-stack and Web3 hackathon prototyping: Next.js, Tailwind, shadcn/ui, Supabase (database),
   Privy or chain-native auth, API routes, motion, onboarding tours, and MCP setup. Use when building or scoping
   a hackathon app, hack weekend MVP, sponsor integration, or fast-iteration web3 prototype. For problem-first
-  ideation and mapping tracks after the product story, use hackathon-problem-first first.
+  ideation and mapping tracks after the product story, use hackathon-problem-first first. For landing Lenis/SEO,
+  PWA, favicons, and conversion copy, use hackathon-landing-pwa. After the app and demo path are complete, use
+  pitch-deck-frontend for the in-app pitch slide page.
 ---
 
 # Hackathon app development
@@ -24,6 +26,7 @@ Apply when starting or evolving a hackathon project that needs **fast iteration*
 3. **Keep Supabase scoped**: use it as **database** (and RLS as needed); avoid expanding scope unless the hack requires it.
 4. **Update onboarding last-mile**: once flows stabilize, refresh the product tour so it matches the current UI.
 5. **Package manager**: use **pnpm** for installs in greenfield Node repos unless the template already fixes npm/yarn.
+6. **Pitch page last**: after core app dev (and landing if applicable), add the **in-app pitch deck** per [pitch-deck-frontend](../pitch-deck-frontend/SKILL.md)—not as a substitute for a live demo, but for judge/investor narrative alongside the product.
 
 ---
 
@@ -68,9 +71,10 @@ If MCPs are missing, prompt the user to add them in **Cursor Settings → MCP** 
 
 ## Design and skills
 
-- **Landing / marketing surface only**: prefer the **Claude `frontend-design`** skill (or equivalent in the user’s environment) for a distinctive first impression; keep app shells and dashboards consistent with shadcn + product UI patterns.
+- **Landing / marketing surface**: follow **[hackathon-landing-pwa](../hackathon-landing-pwa/SKILL.md)** for Lenis scroll, favicon/OG/Twitter assets, PWA, selection styling, and copy/font patterns; pair with the **Claude `frontend-design`** skill (or equivalent) for distinctive visual design. Keep app shells and dashboards consistent with shadcn + product UI patterns.
 - **Before large UI work**: check for **interface-design**, **frontend-design**, or domain skills (e.g. **polkadot-hub**, **yellow-sdk**) and apply when they match the stack.
 - **Sponsor / integration docs**: add official documentation to **Cursor** (Docs / @-mentions / indexed context per Cursor version) so implementation tracks sponsor APIs and constraints.
+- **Pitch slide page (end of build)**: when implementation is **feature-complete for the hack**, follow **[pitch-deck-frontend](../pitch-deck-frontend/SKILL.md)** to add the full-screen, snap-scroll pitch route in the same Next.js app (slides, nav, typography per that skill).
 
 ---
 
@@ -102,7 +106,15 @@ Hackathon app dev checklist
 - [ ] MCPs: Shadcn, Supabase, Privy (if EVM)
 - [ ] Sponsor docs indexed in Cursor
 - [ ] nextstepjs tour added/updated near freeze; fix selectors after UI changes
+- [ ] Landing: Lenis + SEO/PWA/icon set per hackathon-landing-pwa (if shipping a public page)
+- [ ] Pitch: in-app slide page per pitch-deck-frontend (after core demo + landing are done)
 ```
+
+---
+
+## After app development (pitch page)
+
+When the **demo path works**, **onboarding/tour** matches the UI, and **landing/metadata** (if any) are set, build the **web-based pitch presentation** inside the app using **[pitch-deck-frontend](../pitch-deck-frontend/SKILL.md)**. That skill defines snap-scroll slides, keyboard/dot navigation, and content density rules. Treat it as the **closing narrative layer** for judges or sponsors, paired with—not replaced by—the live product demo.
 
 ---
 
@@ -118,14 +130,15 @@ Hackathon app dev checklist
 ## Additional resources
 
 - Env templates, Privy ↔ Supabase patterns, RLS notes, MCP detail, NextStepjs maintenance, and pnpm snippets: [reference.md](reference.md)
+- Landing scroll, metadata, PWA, and copy: [hackathon-landing-pwa](../hackathon-landing-pwa/SKILL.md) and [reference.md](../hackathon-landing-pwa/reference.md)
+- In-app pitch slide page (after build): [pitch-deck-frontend](../pitch-deck-frontend/SKILL.md)
 
 ---
 
 ## Related skills in this repo
 
 - [hackathon-problem-first](../hackathon-problem-first/SKILL.md) — problem- and trend-first ideation; map prizes **after** the product story is coherent. ETHGlobal finalist examples and analysis: [reference.md](../hackathon-problem-first/reference.md#example-projects-problem-first).
-- `hackathon-idea-generator` — many candidate ideas and track constraints (if installed).
-- `hackathon-judge-simulator` — pitch and demo hardening (if installed).
-- `interface-design` — product UI patterns, non-marketing (if installed).
+- [hackathon-landing-pwa](../hackathon-landing-pwa/SKILL.md) — Lenis, favicons/manifest, OG/Twitter banner, PWA, `::selection`, conversion copy, fonts.
+- [pitch-deck-frontend](../pitch-deck-frontend/SKILL.md) — full-screen snap-scroll pitch deck in the frontend app; use **after** core app dev is complete.
 
 When the user’s machine has other skills installed (e.g. Polkadot Hub, Yellow SDK), prefer those instructions for chain-specific work.
