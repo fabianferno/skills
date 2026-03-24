@@ -98,6 +98,23 @@ Pair copy with imagery that carries **emotion** and **sequence** (problem → ou
 
 ---
 
+## Choosing fonts by app nature
+
+Use this to **automatically** narrow choices before opening font sites. Mix **one Google body** + **one DaFont (or Google) display** unless the brand is intentionally single-family.
+
+| App vibe / domain | Body (Google Fonts) | Heading / display (often DaFont) |
+|-------------------|---------------------|----------------------------------|
+| Default / unsure | **Inter** | **Coolvetica** |
+| SaaS, dashboards, devtools | Inter, **Questrial**, Roboto | Coolvetica, **Herkey** (if a softer brand) |
+| Fintech, trust, legal | Inter, **Hind**, Roboto | Coolvetica, Safira March (use sparingly) |
+| Creative, portfolio, luxury | **Questrial**, Inter | **Safira March**, Relationship of Melodrame |
+| Playful, gaming, consumer viral | Inter, Roboto | **The Magic Castle**, Coolvetica |
+| Editorial, long-form reading | **Hind**, Inter | Herkey, Safira March |
+
+When in doubt, ship **Inter + Coolvetica** and refine after user feedback.
+
+---
+
 ## Fonts
 
 ### Body / UI (Google Fonts)
@@ -105,21 +122,75 @@ Pair copy with imagery that carries **emotion** and **sequence** (problem → ou
 Prefer one primary sans for UI and long text: **Inter**, **Roboto**, **Questrial**, **Hind**, **Craftwork Sans**.  
 **Helvetica** is system/UI-adjacent; on the web, pair with a licensed web alternative or system stack if you cannot embed it.
 
-### Display / heading (stylized or bold)
+### Display / heading (DaFont or Google)
 
-Use for **hero and section titles** only; subset/limit weights for performance.
+Use for **hero and section titles** only; subset/limit weights for performance. **Download** display fonts from [DaFont](https://www.dafont.com) (or the vendor site); verify **license** for demo vs commercial use.
 
 | Font | Notes | Link |
 |------|--------|------|
 | Safira March | Elegant, stylized | https://www.dafont.com/safira-march.font |
 | Herkey | Elegant, stylized | https://www.dafont.com/herkey.font |
-| Coolvetica | Bold sans | https://www.dafont.com/coolvetica.font |
+| Coolvetica | Bold sans (default heading pair with Inter) | https://www.dafont.com/coolvetica.font |
 | Relationship of Melodrame | Script, elegant | https://www.dafont.com/relationship-of-melodrame.font |
 | The Magic Castle | Playful / game / script | https://www.dafont.com/the-magic-castle.font |
 
-**Licensing:** DaFont assets are not all free for commercial use—confirm license before shipping a public hackathon demo or production.
+**Licensing:** DaFont listings vary—confirm redistribution and commercial use before ETHGlobal showcase or production.
 
-**Implementation:** `next/font/google` for Google families; local `@font-face` (files in `public/fonts` or `app/fonts`) for display fonts with correct `font-display` (e.g. `swap`).
+---
+
+## Tailwind font utilities
+
+**Rule:** Every font gets a **kebab-case** Tailwind key: `font-coolvetica`, `font-safira-march`, etc., backed by a **`next/font` CSS variable** on the root layout. Apply **body** via `className` on `<html>` / `<body>`; apply **headings** with utilities on components (e.g. `className="font-coolvetica"`).
+
+### Example: Inter (base) + Coolvetica (headings)
+
+**1.** Add files: download Coolvetica, convert to **`.woff2`** if needed, e.g. `app/fonts/CoolveticaRg-Regular.woff2`.
+
+**2.** Root layout (App Router):
+
+```tsx
+import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const coolvetica = localFont({
+  src: './fonts/CoolveticaRg-Regular.woff2',
+  variable: '--font-coolvetica',
+  display: 'swap',
+})
+
+// <html className={`${inter.variable} ${coolvetica.variable}`}>
+//   <body className="font-sans antialiased">...</body>
+// </html>
+```
+
+**3.** Tailwind v3 (`tailwind.config.ts`) — map `sans` to Inter and add **`font-coolvetica`**:
+
+```ts
+theme: {
+  extend: {
+    fontFamily: {
+      sans: ['var(--font-inter)', 'ui-sans-serif', 'system-ui'],
+      coolvetica: ['var(--font-coolvetica)', 'ui-sans-serif', 'system-ui'],
+    },
+  },
+},
+```
+
+**4.** Usage — body inherits **`font-sans`**; headings use **`font-coolvetica`**:
+
+```tsx
+<h1 className="font-coolvetica text-4xl tracking-tight">Title</h1>
+```
+
+**Adding more DaFont or Google faces:** repeat `next/font/local` or `next/font/google` with `variable: '--font-{name}'`, add **`font-{kebab}`** under `theme.extend.fontFamily`, and compose variables on `<html className={...}>`.
+
+**Tailwind v4:** define the same logical names inside `@theme` / `theme` per your project’s CSS-first config, still pointing at `var(--font-inter)`, `var(--font-coolvetica)`, etc.
 
 ---
 

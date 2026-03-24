@@ -3,8 +3,9 @@ name: hackathon-landing-pwa
 description: >-
   Landing page and app shell polish for Next.js hackathon projects: Lenis smooth scroll, SEO and social images
   (favicon set, web manifest, Open Graph/Twitter banner from a seed asset), global selection styling, PWA basics,
-  conversion-oriented copy frameworks, and heading/body font pairing. Use when building or refining a marketing
-  landing page, app metadata, installable PWA, favicons, or scroll/typography polish alongside hackathon-app-dev.
+  conversion-oriented copy frameworks, typography (Google Fonts + DaFont, Tailwind `font-*` utilities). Use when
+  building or refining a marketing landing page, app metadata, installable PWA, favicons, or scroll/typography
+  polish alongside hackathon-app-dev.
 ---
 
 # Hackathon landing page, SEO, and PWA
@@ -69,10 +70,19 @@ In global styles (e.g. `app/globals.css`), set `::selection` (and `::-moz-select
 
 ---
 
-## Copy and typography (reference)
+## Typography and fonts
+
+1. **Infer faces from app nature** — Pick heading + body fonts that match the product (tone, industry, energy). Use the heuristics in [reference.md](reference.md#choosing-fonts-by-app-nature); if still unsure, use the **defaults** below.
+2. **Sources** — **Google Fonts** for body/UI via `next/font/google` (download is handled by Next). **DaFont** (and similar) for display/heading files: download the licensed `.woff2` / `.ttf` (convert to **woff2** when possible), place under e.g. `app/fonts/` or `public/fonts/`, load with `next/font/local`.
+3. **Defaults when unsure** — **Inter** as the global **base / body** (`font-sans`). **Coolvetica** ([DaFont](https://www.dafont.com/coolvetica.font)) for **headings** and hero type, applied with the utility **`font-coolvetica`** on heading elements (not on the whole document).
+4. **Tailwind convention (all custom fonts)** — For every local or Google font you add, expose it as **`font-{kebab-case-name}`** in the Tailwind theme (e.g. `font-coolvetica`, `font-safira-march`). Map each to a **CSS variable** from `next/font` (`variable: '--font-coolvetica'`) so utilities stay consistent across the app. Full layout + `tailwind.config` / `@theme` patterns: [reference.md](reference.md#tailwind-font-utilities).
+
+---
+
+## Copy (reference)
 
 - **Conversion copy**: WHO/WHY/WHAT headlines, CTA → **CTV** (benefit-led), **PAS**, benefits over features, social proof, visual story. Full patterns and examples: [reference.md](reference.md#landing-page-copywriting).
-- **Fonts**: humanist/geometric **display** for headings + **Inter-class** body from Google Fonts; optional display fonts (incl. DaFont) and base list: [reference.md](reference.md#fonts).
+- **Font catalog** (optional headings, Google body list): [reference.md](reference.md#fonts).
 
 ---
 
